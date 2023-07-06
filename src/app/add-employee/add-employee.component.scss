@@ -1,0 +1,64 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .employee {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .employee-details {
+    margin-bottom: 10px;
+  }
+  
+  .employee-actions {
+    text-align: right;
+  }
+  
+  .add-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    .employee {
+      padding: 5px;
+    }
+  
+    .employee-actions {
+      margin-top: 10px;
+    }
+  
+    .add-button {
+      margin: 10px auto;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+      max-width: 800px;
+    }
+  }
+  
+  /* Additional styles for tablet view */
+  
+  @media (min-width: 1025px) {
+    .container {
+      max-width: 1000px;
+    }
+  }
+  

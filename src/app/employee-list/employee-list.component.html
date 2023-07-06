@@ -1,0 +1,33 @@
+<div class="container">
+<h2>Current Employees</h2>
+<div class="employee-list">
+  <div *ngFor="let employee of currentEmployees" class="employee" (swipeleft)="deleteEmployee(employee.id)">
+    <div class="employee-details">
+      <p><strong>Name:</strong> {{ employee.name }}</p>
+      <p><strong>Role:</strong> {{ employee.role }}</p>
+      <p><strong>Date:</strong> {{ employee.date }}</p>
+    </div>
+    <div class="employee-actions">
+      <button class="delete-button" (click)="deleteEmployee(employee.id)">Delete</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+<h2>Previous Employees</h2>
+<div class="employee-list">
+  <div *ngFor="let employee of previousEmployees" class="employee" (swipeleft)="deleteEmployee(employee.id)">
+    <div class="employee-details">
+      <p><strong>Name:</strong> {{ employee.name }}</p>
+      <p><strong>Role:</strong> {{ employee.role }}</p>
+      <p><strong>Date:</strong> {{ employee.date }}</p>
+    </div>
+    <div class="employee-actions">
+      <button class="delete-button" (click)="deleteEmployee(employee.id)">Delete</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<button class="add-button" (click)="showAddEmployeeForm()">Add Employee</button>

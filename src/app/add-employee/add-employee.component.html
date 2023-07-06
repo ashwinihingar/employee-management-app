@@ -1,0 +1,27 @@
+<div class="container">
+<h2>Add Employee</h2>
+<form (ngSubmit)="addEmployee()">
+  <label for="name">Employee Name:</label>
+  <textarea id="name" name="name" [(ngModel)]="newEmployee.name" required></textarea>
+
+  <label for="role">Role:</label>
+  <select id="role" name="role" [(ngModel)]="newEmployee.role" required>
+    <option value="">Select Role</option>
+       <option value="Product developer">Product developer</option>
+    <option value="Flutter developer">Flutter developer</option>
+    <option value="QA tester">QA tester</option>
+    <option value="Product Owner">Product Owner</option>
+  </select>
+
+  <label for="date">Date:</label>
+<mat-form-field appearance="fill">
+  <mat-label>Date</mat-label>
+  <input matInput [matDatepicker]="picker" name="date" [(ngModel)]="newEmployee.date" (dateChange)="onDateChange($event)" required readonly>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+  <button type="submit">Save</button>
+  <button type="button" (click)="cancel()">Cancel</button>
+</form>
+</div>
